@@ -8,6 +8,12 @@ const main = async () => {
     address: "x",
   });
   console.log(response);
+  const transferRes = await walletServiceClient.Transfer({
+    amount: 100,
+    from: "user",
+    to: "admin",
+  });
+  console.log(transferRes);
 };
 
 main();
